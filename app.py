@@ -11,12 +11,12 @@ from keras.models import Model, load_model
 app = Flask(__name__)
 # run_with_ngrok(app)
 
-# Load the TF-IDF vocabulary specific to the category
-with open(r"token.pkl", "rb") as f:
+# Load the Tokenizer file
+with open(r"tokenizer.pkl", "rb") as f:
     token = pickle.load(f)
 
-# Load the pickled RDF models
-model = load_model('model.h5')
+# Load the lstm model
+model = load_model('lstm_model.h5')
 
 # Render the HTML file for the home page
 @app.route("/",methods=['GET','POST'])
