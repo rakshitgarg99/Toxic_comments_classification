@@ -1,7 +1,5 @@
 Flask
-Jinja2
-MarkupSafe
-pandas
+numpy
 tensorflow
 keras
 uvicorn
