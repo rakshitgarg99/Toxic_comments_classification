@@ -16,7 +16,7 @@ with open(r"tokenizer.pkl", "rb") as f:
     token = pickle.load(f)
 
 # Load the lstm model
-model = load_model('lstm_model.h5')
+model = load_model('model.h5')
 
 # Render the HTML file for the home page
 @app.route("/",methods=['GET','POST'])

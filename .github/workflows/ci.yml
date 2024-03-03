@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Log In to dockerHub
+      run: docker login -u rakshitgarg99126 -p dckr_pat_b5BHWNIVjD9Rjgnttwxb49nBtnQ
+    - name: Build docker image
+      run: docker build -t ci_cd_practice .
+    - name: Tag image docker
+      run: docker tag ci_cd_practice:latest rakshitgarg99126/ci_cd_practice:latest
+    - name: push docker image
+      run: docker push rakshitgarg99126/ci_cd_practice:latest
