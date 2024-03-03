@@ -1,7 +1,7 @@
-Flask>=1.1.2
-Jinja2>=2.11.2
-MarkupSafe>=1.1.1
+Flask
+Jinja2
+MarkupSafe
 pandas
-tensorflow>=2.6.0
-keras>=2.6.0
+tensorflow
+keras
 uvicorn
