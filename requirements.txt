@@ -10,3 +10,4 @@ Werkzeug>=1.0.1
 gunicorn>=19.9.0
 tensorflow>=2.6.0
 keras>=2.6.0
+uvicorn
