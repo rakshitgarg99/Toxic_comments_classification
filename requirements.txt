@@ -2,7 +2,6 @@ Flask>=1.1.2
 Jinja2>=2.11.2
 MarkupSafe>=1.1.1
 pandas
-gunicorn
 tensorflow>=2.6.0
 keras>=2.6.0
 uvicorn
