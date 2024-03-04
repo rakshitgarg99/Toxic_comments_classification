@@ -15,8 +15,8 @@ jobs:
     - name: Log In to dockerHub
       run: docker login -u rakshitgarg99126 -p dckr_pat_b5BHWNIVjD9Rjgnttwxb49nBtnQ
     - name: Build docker image
-      run: docker build -t ci_cd_practice .
+      run: docker build -t toxic_comment_classifier .
     - name: Tag image docker
-      run: docker tag ci_cd_practice:latest rakshitgarg99126/ci_cd_practice:latest
+      run: docker tag toxic_comment_classifier:latest rakshitgarg99126/toxic_comment_classifier:latest
     - name: push docker image
-      run: docker push rakshitgarg99126/ci_cd_practice:latest
+      run: docker push rakshitgarg99126/toxic_comment_classifier:latest
