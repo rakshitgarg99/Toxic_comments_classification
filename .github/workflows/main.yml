@@ -13,7 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Log In to dockerHub
-      run: docker login -u rakshitgarg99126 -p dckr_pat_b5BHWNIVjD9Rjgnttwxb49nBtnQ
+      env:
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+      run: docker login -u DOCKERHUB_USERNAME -p DOCKERHUB_TOKEN
+
     - name: Build docker image
       run: docker build -t toxic_comment_classifier .
     - name: Tag image docker
